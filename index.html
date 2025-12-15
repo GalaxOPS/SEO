@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GalaxOPS • SEO • Cybersecurity • Web Platforms</title>
+  <meta name="description" content="GalaxOPS – Production SEO, Cybersecurity & High‑Performance Web Platforms. Real projects. Real traffic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #070b14;
+      --card: rgba(255,255,255,0.06);
+      --accent: #58A6FF;
+      --neon: #00eaff;
+      --neon-pink: #ff00ff;
+      --neon-purple: #7f00ff;
+      --hackthebox-color: #9fef00;
+      --purple: #7f5cff;
+      --text: #e6ebff;
+      --muted: #9aa4bf;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Fira Code', monospace;
+      background: radial-gradient(1200px 600px at top, #0f1633, var(--bg)),
+                  radial-gradient(800px 800px at 80% 20%, rgba(127, 0, 255, 0.15), transparent),
+                  radial-gradient(600px 600px at 20% 80%, rgba(0, 234, 255, 0.1), transparent);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(88,166,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(88,166,255,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      z-index: -1;
+    }
+
+    .led-effect {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, 
+        var(--neon-pink), 
+        var(--neon), 
+        var(--hackthebox-color),
+        var(--neon-purple), 
+        var(--accent)
+      );
+      z-index: 1000;
+      animation: ledSlide 3s linear infinite;
+      box-shadow: 0 0 20px var(--neon);
+    }
+
+    @keyframes ledSlide {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 400% 50%; }
+    }
+
+    .neon-text {
+      color: var(--text);
+      text-shadow: 
+        0 0 10px var(--neon),
+        0 0 20px var(--neon),
+        0 0 30px var(--neon);
+    }
+
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+      position: relative;
+    }
+
+    .typing img { max-width: 100%; }
+
+    .badges img { 
+      margin: 6px; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .badges img:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 234, 255, 0.4);
+    }
+
+    .social a img { 
+      margin: 10px; 
+      transition: all 0.3s ease;
+      filter: brightness(0.9);
+    }
+
+    .social a:hover img {
+      transform: scale(1.1);
+      filter: brightness(1.2) drop-shadow(0 0 8px var(--accent));
+    }
+
+    section {
+      max-width: 1300px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 25px;
+      text-shadow: 0 0 18px rgba(88,166,255,0.7);
+      position: relative;
+      display: inline-block;
+      padding-left: 15px;
+    }
+
+    .section-title::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: var(--neon);
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    /* გახდა უფრო გამჭირვალე ეფექტი */
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(88,166,255,0.15);
+      border-radius: 18px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s ease, box-shadow .35s ease;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(120deg, 
+        transparent, 
+        rgba(255, 0, 255, 0.1), 
+        rgba(0, 234, 255, 0.1), 
+        rgba(127, 0, 255, 0.1), 
+        transparent
+      );
+      opacity: 0;
+      transition: opacity .35s ease;
+      z-index: -1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 
+        0 20px 40px rgba(0, 234, 255, 0.15),
+        0 0 80px rgba(127, 0, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(88,166,255,0.3);
+    }
+
+    .card:hover::before { 
+      opacity: .8; 
+    }
+
+    .card h3 { 
+      margin-bottom: 10px; 
+      color: var(--text);
+    }
+    
+    .card p { 
+      color: var(--muted); 
+      font-size: .92rem; 
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding-right: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .card a::after {
+      content: "→";
+      position: absolute;
+      right: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card a:hover {
+      color: var(--neon);
+    }
+
+    .card a:hover::after {
+      transform: translateX(5px);
+    }
+
+    /* Accounts Section Styling */
+    .accounts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    /* აქაც გახადე გამჭირვალე */
+    .account-card {
+      background: rgba(88,166,255,0.05);
+      border: 1px solid rgba(88,166,255,0.2);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+
+    .account-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(0, 234, 255, 0.08) 0%,
+        rgba(255, 0, 255, 0.04) 50%,
+        transparent 100%
+      );
+      transform: rotate(30deg);
+      z-index: -1;
+    }
+
+    .account-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 
+        0 15px 35px rgba(0, 234, 255, 0.2),
+        0 0 60px rgba(127, 0, 255, 0.1);
+      border-color: var(--neon);
+      background: rgba(88,166,255,0.08);
+    }
+
+    .account-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 15px currentColor;
+    }
+
+    .account-card:nth-child(1) .account-icon { color: #00ff9d; }
+    .account-card:nth-child(2) .account-icon { color: #58A6FF; }
+    .account-card:nth-child(3) .account-icon { color: #ff4757; }
+    .account-card:nth-child(4) .account-icon { color: #9fef00; }
+
+    .account-card h3 {
+      margin-bottom: 10px;
+      color: var(--text);
+      font-size: 1.3rem;
+    }
+
+    .account-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .account-link {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--neon), var(--neon-purple));
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 234, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hackthebox-link {
+      background: linear-gradient(90deg, var(--hackthebox-color), #1a2332);
+    }
+
+    .hackthebox-link:hover {
+      background: linear-gradient(90deg, #1a2332, var(--hackthebox-color));
+      box-shadow: 0 8px 25px rgba(159, 239, 0, 0.5);
+    }
+
+    .account-link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .account-link:hover::before {
+      left: 100%;
+    }
+
+    .account-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 234, 255, 0.5);
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon));
+    }
+
+    .neon-pulse {
+      animation: neonPulse 4s infinite alternate;
+    }
+
+    @keyframes neonPulse {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 234, 255, 0.1);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+      }
+    }
+
+    /* ახალი პროექტების სექციის სტილი */
+    /* ⚠️ აქ შეგიძლია დაამატო სამომავლოდ გაკეთებული პროექტები */
+    .upcoming-projects {
+      background: rgba(88,166,255,0.03);
+      border: 1px dashed rgba(88,166,255,0.3);
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    .upcoming-projects h3 {
+      color: var(--accent);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .upcoming-projects p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .add-project-btn {
+      display: inline-block;
+      background: rgba(88,166,255,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(88,166,255,0.3);
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .add-project-btn:hover {
+      background: rgba(88,166,255,0.2);
+      border-color: var(--neon);
+      color: var(--neon);
+    }
+
+    .expertise {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(88,166,255,0.15);
+      border-radius: 22px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 45px rgba(88,166,255,0.1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .expertise::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.03),
+        transparent
+      );
+      transition: left 0.7s ease;
+    }
+
+    .expertise:hover::before {
+      left: 100%;
+    }
+
+    .expertise pre {
+      background: transparent;
+      color: #fff;
+      font-size: 0.95rem;
+      text-align: left;
+      display: inline-block;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      padding: 50px 20px 70px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      backdrop-filter: blur(10px);
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--neon), 
+        var(--hackthebox-color),
+        var(--neon-purple), 
+        var(--neon-pink),
+        transparent
+      );
+    }
+
+    @media (max-width: 600px) {
+      header { padding-top: 70px; }
+      .section-title { font-size: 1.25rem; }
+      .accounts-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+    }
+
+    /* Floating particles effect */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      background: var(--neon);
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: float 15s infinite linear;
+    }
+
+    .hackthebox-particle {
+      background: var(--hackthebox-color);
+      opacity: 0.1;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-100px) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="led-effect"></div>
+
+<!-- Floating particles -->
+<div class="particles" id="particles"></div>
+
+<header>
+  <div class="typing">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=GalaxOPS+Solution;SEO+%7C+Cybersecurity+%7C+Web+Platforms" />
+  </div>
+
+  <div class="badges">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+    <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen.svg" />
+    <img src="https://img.shields.io/badge/Build-Passing-success.svg" />
+    <img src="https://img.shields.io/badge/SEO-Optimized-2C8EBB" />
+    <img src="https://img.shields.io/badge/Cybersecurity-Expert-FF6D00" />
+    <img src="https://img.shields.io/badge/Web-Development-6DB33F" />
+    <img src="https://img.shields.io/badge/HackerOne-Bug%20Bounty-critical" />
+    <img src="https://img.shields.io/badge/Google-Developer-blue" />
+    <img src="https://img.shields.io/badge/HackTheBox-Pentesting-9fef00" />
+  </div>
+
+  <div class="social">
+    <a href="https://www.linkedin.com/in/khetaguridimitri" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+    <a href="https://twitter.com/xetaguridimitri" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
+    <a href="https://galaxsus.com" target="_blank"><img src="https://img.shields.io/badge/Website-Galaxsus.com-0F0F0F?style=for-the-badge"></a>
+    <a href="https://hackerone.com/galaxops?type=user" target="_blank"><img src="https://img.shields.io/badge/HackerOne-494649?style=for-the-badge&logo=hackerone&logoColor=white"></a>
+    <a href="https://g.dev/khetaguridimitri" target="_blank"><img src="https://img.shields.io/badge/Google_Developer-4285F4?style=for-the-badge&logo=google&logoColor=white"></a>
+    <a href="https://ctf.hackthebox.com/user/profile/341952" target="_blank"><img src="https://img.shields.io/badge/HackTheBox-9fef00?style=for-the-badge&logo=hackthebox&logoColor=black"></a>
+  </div>
+</header>
+
+<section>
+  <div class="section-title">🔐 My Security & Developer Accounts</div>
+  <div class="accounts-grid">
+    <div class="account-card neon-pulse">
+      <div class="account-icon">🛡️</div>
+      <h3>HackerOne</h3>
+      <p>Bug Bounty & Security Research</p>
+      <a href="https://hackerone.com/galaxops?type=user" target="_blank" class="account-link">View Profile →</a>
+    </div>
+    
+    <div class="account-card neon-pulse">
+      <div class="account-icon">⚡</div>
+      <h3>Google Developer</h3>
+      <p>Technical Credentials & API Access</p>
+      <a href="https://g.dev/khetaguridimitri" target="_blank" class="account-link">View Profile →</a>
+    </div>
+    
+    <div class="account-card neon-pulse">
+      <div class="account-icon">🐛</div>
+      <h3>Bugcrowd</h3>
+      <p>Crowdsourced Security Testing</p>
+      <a href="https://bugcrowd.com/h/GalaxOPS" target="_blank" class="account-link">View Profile →</a>
+    </div>
+
+    <div class="account-card neon-pulse">
+      <div class="account-icon">🔓</div>
+      <h3>HackTheBox</h3>
+      <p>Penetration Testing & CTF Challenges</p>
+      <a href="https://ctf.hackthebox.com/user/profile/341952" target="_blank" class="account-link hackthebox-link">View Profile →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">🏛️ Institutional & Corporate</div>
+  <div class="cards">
+    <div class="card"><h3>Patriarchate</h3><p>Official Patriarchate website – SEO, speed & accessibility optimization</p><a href="https://patriarchate.ge" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Worldconsortium</h3><p>Global organization – multilingual & international SEO</p><a href="https://worldconsortium.org" target="_blank">Visit →</a></div>
+    <div class="card"><h3>BTCopyright</h3><p>Copyright services – commercial & lead‑generation SEO</p><a href="https://btcopyright.com" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Experti</h3><p>Analytics & expert content platform</p><a href="https://experti.ge" target="_blank">Visit →</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">🧑‍💼 Job & Marketplace Platforms</div>
+  <div class="cards">
+    <div class="card"><h3>Joblist</h3><p>Job portal – dynamic indexing & local SEO</p><a href="https://joblist.ge" target="_blank">Visit →</a></div>
+    <div class="card"><h3>GalaxsUS</h3><p>Global job platform – multilingual SEO</p><a href="https://galaxsus.com" target="_blank">Visit →</a></div>
+    <div class="card"><h3>SellHub</h3><p>Real estate marketplace – Maps & listings SEO</p><a href="https://sellhub.ge" target="_blank">Visit →</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">🎰 iGaming / Casino</div>
+  <div class="cards">
+    <div class="card"><h3>CryptonBets</h3><p>Crypto casino – PWA & mobile SEO</p><a href="https://cryptonbets.com" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Bongo Land</h3><p>Casino landing – Core Web Vitals & conversion</p><a href="https://bongo.land" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Zino Game</h3><p>Online casino – technical SEO</p><a href="https://zino-game.com" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Genesis Game</h3><p>Gaming platform – Yandex & Bing SEO</p><a href="https://genesisgame.co" target="_blank">Visit →</a></div>
+    <div class="card"><h3>BillionBahis</h3><p>Sports betting – Cloudflare & security SEO</p><a href="https://billionbahis.com" target="_blank">Visit →</a></div>
+    <div class="card"><h3>BestOneCasinoRanks</h3><p>Casino rankings – affiliate & trust SEO</p><a href="https://bestonecasinoranks.com" target="_blank">Visit →</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">🔐 Cybersecurity & FinTech</div>
+  <div class="cards">
+    <div class="card"><h3>CybSecGroup</h3><p>Cybersecurity group – privacy‑focused SEO</p><a href="https://cybsecgroup.com" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Seclab</h3><p>Cyber info platform – expert content & backlinks</p><a href="https://seclab.ge" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Sfor Trade</h3><p>Crypto trading – API & real‑time SEO</p><a href="https://sfor.trade" target="_blank">Visit →</a></div>
+    <div class="card"><h3>Sforpay</h3><p>Payment system – transactional & trust SEO</p><a href="https://sforpay.com" target="_blank">Visit →</a></div>
+  </div>
+  <!-- ⚠️ აქ შეგიძლია დაამატო სამომავლოდ გაკეთებული პროექტები -->
+  <!-- 
+  <div class="upcoming-projects">
+    <h3>🚀 Upcoming Projects</h3>
+    <p>Projects that are currently in development or planning phase</p>
+    
+    <div class="cards" style="margin-top: 20px;">
+      <div class="card">
+        <h3>Project Name 1</h3>
+        <p>Description of your upcoming project</p>
+        <a href="#" target="_blank">Coming Soon →</a>
+      </div>
+      <div class="card">
+        <h3>Project Name 2</h3>
+        <p>Description of your upcoming project</p>
+        <a href="#" target="_blank">Coming Soon →</a>
+      </div>
+      <div class="card">
+        <h3>Project Name 3</h3>
+        <p>Description of your upcoming project</p>
+        <a href="#" target="_blank">Coming Soon →</a>
+      </div>
+    </div>
+    
+    <button class="add-project-btn" onclick="addNewProject()">+ Add New Project</button>
+  </div>
+  -->
+</section>
+
+<section>
+  <div class="expertise">
+    <pre>
+✔ Technical SEO
+✔ Cybersecurity & Infrastructure
+✔ iGaming & Crypto Platforms
+✔ High‑Traffic Websites
+✔ International & Multilingual SEO
+✔ Performance & Core Web Vitals
+✔ Bug Bounty & Security Research
+✔ Penetration Testing (HTB)
+    </pre>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=4000&pause=1200&color=58A6FF&center=true&vCenter=true&width=600&lines=Production+Projects+%7C+Real+Experience;Time+is+Money" />
+  </div>
+</section>
+
+<footer>
+  © GalaxOPS • GitHub Pages • /seo
+</footer>
+
+<script>
+  // Create floating particles
+  document.addEventListener('DOMContentLoaded', function() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Add HackTheBox particles randomly
+      if (Math.random() > 0.7) {
+        particle.classList.add('hackthebox-particle');
+      }
+      
+      // Random size
+      const size = Math.random() * 4 + 1;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Random position
+      particle.style.left = `${Math.random() * 100}%`;
+      
+      // Random color with opacity
+      const colors = [
+        'rgba(0, 234, 255, 0.2)',
+        'rgba(255, 0, 255, 0.15)',
+        'rgba(127, 0, 255, 0.15)',
+        'rgba(88, 166, 255, 0.15)',
+        'rgba(159, 239, 0, 0.1)'
+      ];
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      
+      // Random animation
+      particle.style.animationDuration = `${Math.random() * 20 + 15}s`;
+      particle.style.animationDelay = `${Math.random() * 5}s`;
+      
+      particlesContainer.appendChild(particle);
+    }
+    
+    // Add hover effect to cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.zIndex = '10';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.zIndex = '1';
+      });
+    });
+  });
+
+  // Function to add new project (დამატებითი ფუნქციონალი)
+  function addNewProject() {
+    const projectName = prompt("Enter project name:");
+    const projectDescription = prompt("Enter project description:");
+    const projectURL = prompt("Enter project URL (or leave blank for 'Coming Soon'):");
+    
+    if (projectName && projectDescription) {
+      const linkText = projectURL ? `Visit →` : `Coming Soon →`;
+      const linkURL = projectURL || '#';
+      
+      const newProjectHTML = `
+        <div class="card">
+          <h3>${projectName}</h3>
+          <p>${projectDescription}</p>
+          <a href="${linkURL}" target="_blank">${linkText}</a>
+        </div>
+      `;
+      
+      // You would need to save this to a database or localStorage
+      alert("Project added! (In a real implementation, this would save to a database)");
+      
+      // For demo purposes, we'll just show an alert
+      console.log("New Project:", { projectName, projectDescription, projectURL });
+    }
+  }
+</script>
+
+</body>
+</html>
