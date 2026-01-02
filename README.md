@@ -1,7 +1,5 @@
 # 🌐 Digital Presence Optimization Toolkit
 
-![SEO Meta Tags](https://img.shields.io/badge/Meta-Tags-important) ![Social Media](https://img.shields.io/badge/Social-Media-blue) ![Webmaster Tools](https://img.shields.io/badge/Webmaster-Tools-success)
-
 # ⚡️ Website Meta & Marketing Essentials
 
 Supercharge your online presence with smart tools and optimized meta tags for SEO, SEM, SMM, and SMO. Let the web engines and social platforms know who you are! 🚀
