@@ -1,4 +1,4 @@
-# 🌐 Digital Presence Optimization Toolkit!
+# 🌐 Digital Presence Optimization Toolkit
 
 ![SEO Meta Tags](https://img.shields.io/badge/Meta-Tags-important) ![Social Media](https://img.shields.io/badge/Social-Media-blue) ![Webmaster Tools](https://img.shields.io/badge/Webmaster-Tools-success)
 
