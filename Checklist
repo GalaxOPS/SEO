@@ -1,0 +1,112 @@
+# ✅ SEO Checklist (Complete Guide)
+
+A step-by-step checklist to ensure your website is technically sound, well-optimized on-page, content-rich, and authoritative for search engines like Google.
+
+---
+
+## 🔧 1. Technical SEO
+
+- [ ] HTTPS enabled (SSL active)
+- [ ] Single canonical version (https + www OR non-www)
+- [ ] HTTP → HTTPS redirect enabled
+- [ ] Mobile-friendly design
+- [ ] Core Web Vitals optimized:
+  - [ ] LCP < 2.5s
+  - [ ] CLS < 0.1
+  - [ ] INP < 200ms
+- [ ] No crawl errors (Google Search Console)
+- [ ] XML Sitemap available (`/sitemap.xml`)
+- [ ] Robots.txt properly configured
+- [ ] Noindex applied to dev / staging pages
+- [ ] Optimized 404 error page
+- [ ] No redirect chains or loops
+
+---
+
+## 🧱 2. On-Page SEO
+
+- [ ] Unique title tag (50–60 characters)
+- [ ] Meta description (120–160 characters)
+- [ ] Only one H1 per page
+- [ ] Logical H2 / H3 structure
+- [ ] Clean, keyword-based URLs
+- [ ] Primary keyword in the first 100 words
+- [ ] Internal linking (3–5 links per page)
+- [ ] Image ALT attributes
+- [ ] No duplicate content
+- [ ] Proper pagination setup
+
+---
+
+## ✍️ 3. Content SEO
+
+- [ ] Matches search intent
+- [ ] Minimum 800–1500 words (when appropriate)
+- [ ] Clear content hierarchy
+- [ ] FAQ section included
+- [ ] Schema Markup implemented:
+  - [ ] Article
+  - [ ] FAQ
+  - [ ] Breadcrumb
+- [ ] Content updated regularly
+- [ ] AI-assisted content reviewed by humans
+
+---
+
+## ⚡ 4. Performance & UX
+
+- [ ] PageSpeed score 90+
+- [ ] Images compressed (WebP / AVIF)
+- [ ] Lazy loading enabled
+- [ ] CSS & JS minified
+- [ ] Critical CSS loaded first
+- [ ] CDN enabled (Cloudflare recommended)
+- [ ] No intrusive pop-ups
+- [ ] Clear navigation and CTAs
+
+---
+
+## 🔗 5. Off-Page SEO & Authority
+
+- [ ] Backlinks from relevant websites
+- [ ] Natural anchor text distribution
+- [ ] No spammy or toxic links
+- [ ] Brand mentions
+- [ ] Social signals
+- [ ] Local citations (if applicable)
+
+---
+
+## 🧠 6. Indexing & Tracking
+
+- [ ] Google Search Console connected
+- [ ] Google Analytics / GA4 installed
+- [ ] Important pages indexed
+- [ ] No orphan pages
+- [ ] Crawl budget optimized
+- [ ] Log file analysis (advanced)
+
+---
+
+## 🛡️ 7. Security & Trust
+
+- [ ] HTTPS everywhere
+- [ ] Secure cookies
+- [ ] reCAPTCHA / anti-bot protection
+- [ ] Privacy Policy page
+- [ ] Terms & Conditions page
+- [ ] Contact & About pages available
+
+---
+
+## 🎯 Pro Tips
+
+- Focus on search intent, not just keywords
+- Optimize top-performing pages first
+- Update old content regularly
+- Technical SEO is the foundation of rankings
+- Good UX improves SEO performance
+
+---
+
+⭐ If you find this checklist useful, give the repo a star!
