@@ -26,3 +26,5 @@ Supercharge your online presence with smart tools and optimized meta tags for SE
 
 **Social Media:**  
 [Facebook](https://facebook.com) • [Instagram](https://instagram.com) • [Twitter](https://twitter.com) • [LinkedIn](https://linkedin.com) • [Telegram](https://telegram.org) • [WhatsApp](https://whatsapp.com)
+
+<!-- Pair Extraordinaire test -->
