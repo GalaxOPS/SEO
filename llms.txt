@@ -1,0 +1,3 @@
+# LLM usage policy
+User-agent: *
+Allow: /

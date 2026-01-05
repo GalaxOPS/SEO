@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: GalaxOPS
+Site: https://galaxops.github.io/GalaxOPS/
+
+/* TECHNOLOGY */
+HTML5
+Service Workers
+PWA
+GitHub Pages
+
+/* THANKS */
+Open Source Community
